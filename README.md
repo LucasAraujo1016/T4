@@ -1,146 +1,90 @@
-# Sistema WB - Interface Gráfica (Frontend)
+# Sistema WB - Interface Web
 
-Bem-vindo à documentação oficial do projeto de interface gráfica do **Sistema WB**. Este projeto foi desenvolvido para o Grupo World Beauty (WB) com o objetivo de modernizar e facilitar o uso do sistema por meio de uma interface web responsiva, intuitiva e acessível em qualquer dispositivo.
-
----
-
-## 📋 Sumário
-
-- [Visão Geral](#visão-geral)
-- [O que foi desenvolvido](#o-que-foi-desenvolvido)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Como Executar o Projeto](#como-executar-o-projeto)
-- [Integração com o Backend](#integração-com-o-backend)
-- [Funcionalidades Disponíveis](#funcionalidades-disponíveis)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Padrões de Desenvolvimento](#padrões-de-desenvolvimento)
-- [Customização e Temas](#customização-e-temas)
-- [Contribuição](#contribuição)
-- [Contato](#contato)
+Este repositório contém o frontend do Sistema WB, desenvolvido para o Grupo World Beauty (WB). O objetivo é fornecer uma interface web moderna, responsiva e eficiente para a gestão de clientes, integrando-se a um micro-serviço RESTful em Java.
 
 ---
 
 ## Visão Geral
 
-O **Sistema WB** foi projetado para atender todas as franquias do Grupo World Beauty, proporcionando uma experiência moderna e eficiente para os usuários. A interface gráfica (GUI) foi construída com foco em usabilidade, responsividade e facilidade de navegação, garantindo que qualquer colaborador, independente do dispositivo, consiga operar o sistema sem dificuldades.
-
-O sistema segue o padrão RESTful, separando as responsabilidades do frontend e backend, permitindo evolução independente de cada camada.
+O Sistema WB foi projetado para atender as necessidades reais do Grupo World Beauty, permitindo que colaboradores de todas as franquias possam gerenciar clientes de forma simples, segura e intuitiva. O frontend foi desenvolvido em React + TypeScript, seguindo as melhores práticas de desenvolvimento web, com foco em usabilidade, escalabilidade e integração transparente com o backend.
 
 ---
 
-## O que foi desenvolvido
+## Funcionalidades Implementadas
 
-Este sistema foi desenvolvido com foco em robustez, escalabilidade e facilidade de manutenção, visando atender demandas reais do Grupo World Beauty.  
-As principais entregas e diferenciais deste projeto são:
+- **Cadastro de Clientes:**  
+  Formulário completo para cadastro de clientes, incluindo nome, sobrenome, email, telefones (DDD e número) e endereço (estado, cidade, bairro, rua, número, CEP, informações adicionais).  
+  Validação de campos obrigatórios e feedback visual ao usuário.
 
-- **Integração completa com micro-serviço RESTful em Java**, utilizando comunicação via JSON para garantir flexibilidade e independência entre frontend e backend.
-- **Operações essenciais de gestão de clientes**:
-  - **Cadastro de clientes**: Formulário completo, validando e enviando todos os dados necessários para o backend.
-  - **Listagem de clientes**: Visualização de todos os clientes cadastrados, com filtro por nome para facilitar buscas rápidas.
-  - **Atualização de clientes**: Permite selecionar o cliente, escolher exatamente qual campo atualizar (incluindo campos individuais do endereço e manipulação de telefones), garantindo precisão e controle.
-  - **Exclusão de clientes**: Busca por nome e exclusão segura, com feedback ao usuário.
-- **Interface gráfica moderna e responsiva**, desenvolvida com React, TypeScript e Tailwind CSS, garantindo usabilidade em qualquer dispositivo.
-- **Feedback visual ao usuário** em todas as operações, promovendo transparência e confiança no uso do sistema.
-- **Documentação clara e detalhada**, facilitando o treinamento de colaboradores e a manutenção futura do sistema.
-- **Estrutura preparada para expansão**, permitindo fácil inclusão de novos módulos como produtos, serviços e relatórios.
+- **Listagem de Clientes:**  
+  Visualização de todos os clientes cadastrados, com filtro por nome para facilitar buscas rápidas. Exibição de todos os dados relevantes do cliente.
 
-Este projeto foi desenvolvido seguindo as melhores práticas de engenharia de software, com foco em qualidade, segurança e experiência do usuário, alinhado às necessidades do Grupo WB.
+- **Atualização de Clientes:**  
+  Busca por nome, seleção do cliente e escolha do campo a ser atualizado (nome, sobrenome, email, endereço - campo individual, telefones).  
+  Para telefones, é possível adicionar, editar ou excluir números.  
+  Para endereço, é possível atualizar qualquer campo separadamente.
+
+- **Exclusão de Clientes:**  
+  Busca por nome, seleção e exclusão do cliente, com confirmação e feedback ao usuário.
+
+- **Feedback ao Usuário:**  
+  Todas as operações apresentam mensagens claras de sucesso ou erro, promovendo transparência e confiança no uso do sistema.
+
+- **Interface Responsiva:**  
+  Layout adaptável para desktop, tablets e celulares, com design moderno e alinhado à identidade visual do Grupo WB.
 
 ---
 
 ## Tecnologias Utilizadas
 
-- **React 18+** (componentes de função e hooks)
-- **TypeScript**
-- **Tailwind CSS** (responsividade e design moderno)
-- **Heroicons** (ícones SVG)
-- **Jest + Testing Library** (testes unitários)
-- **Java 17+** (backend, microserviço REST)
-- **Spring Boot** (backend)
+- **Frontend:**  
+  - React 18+  
+  - TypeScript  
+  - Tailwind CSS  
+  - Heroicons  
+- **Backend:**  
+  - Java 17+  
+  - Spring Boot (micro-serviço RESTful, fornecido pela empresa)
 
 ---
 
 ## Como Executar o Projeto
 
-### 1. Pré-requisitos
+### Pré-requisitos
 
-- Node.js (versão 14 ou superior)
+- Node.js 14+
 - npm ou yarn
-- Java 17 ou superior (para o backend)
+- Java 17+ (para o backend)
 
-### 2. Instalação do Frontend
+### Instalação e Execução do Frontend
 
 ```bash
 cd frontend
 npm install
-# ou
-yarn install
-```
-
-### 3. Execução do Frontend
-
-```bash
-cd frontend
 npm start
-# ou
-yarn start
 ```
-
 Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-### 4. Execução do Backend
+### Execução do Backend
 
-O backend já está pronto e disponível no repositório. Para executar:
+O backend está disponível como um executável Java (`wbbackend.jar`):
 
 ```bash
 cd backend/executavel
 java -jar wbbackend.jar
 ```
-
 O backend ficará disponível em [http://localhost:32832](http://localhost:32832).
 
 ---
 
 ## Integração com o Backend
 
-A comunicação entre frontend e backend é feita via requisições REST (JSON).  
-Principais endpoints utilizados:
+A comunicação entre frontend e backend é feita via requisições REST (JSON), utilizando os seguintes endpoints principais:
 
 - `GET /clientes` — Listar todos os clientes
 - `POST /cliente/cadastrar` — Cadastrar novo cliente
 - `PUT /cliente/atualizar` — Atualizar dados de um cliente
 - `DELETE /cliente/excluir` — Excluir cliente
-
-O frontend consome esses endpoints para todas as operações de cadastro, listagem, atualização e exclusão.
-
----
-
-## Funcionalidades Disponíveis
-
-### Clientes
-
-- **Cadastro de Cliente:**  
-  Formulário completo, com campos para nome, sobrenome, email, telefones (DDD e número) e endereço (estado, cidade, bairro, rua, número, CEP, informações adicionais).
-
-- **Listagem de Clientes:**  
-  Visualização de todos os clientes cadastrados, com filtros por nome.
-
-- **Atualização de Cliente:**  
-  Busca por nome, seleção do cliente, escolha do campo a ser atualizado (incluindo campos individuais do endereço e manipulação de telefones).
-
-- **Exclusão de Cliente:**  
-  Busca por nome, seleção e exclusão do cliente.
-
-- **Feedback ao Usuário:**  
-  Mensagens de sucesso e erro em todas as operações.
-
-### Outras Telas
-
-- **Produtos e Serviços:**  
-  Estrutura pronta para cadastro, atualização, exclusão e listagem (pode ser expandida conforme necessidade futura).
-
-- **Listagens Especiais:**  
-  Exemplos de listagens por gênero, maiores/menores consumidores, etc.
 
 ---
 
@@ -150,15 +94,15 @@ O frontend consome esses endpoints para todas as operações de cadastro, listag
 frontend/
   src/
     componentes/
-      barraNavegacao.tsx
       clientes.tsx
       formularioCadastro.tsx
       home.tsx
+      produtos.tsx
+      servicos.tsx
       listagensEspeciais.tsx
       Modal.tsx
-      produtos.tsx
+      barraNavegacao.tsx
       roteador.tsx
-      servicos.tsx
     api/
       clientes.ts
     index.tsx
@@ -190,38 +134,23 @@ backend/
 
 ---
 
-## Padrões de Desenvolvimento
+## Padrões e Boas Práticas
 
-- **Componentes de Função e Hooks:**  
-  Todos os componentes React são implementados como funções utilizando hooks (`useState`, `useEffect`, etc.), seguindo as práticas modernas do React.
-
-- **Responsividade:**  
-  Layout adaptável para desktop, tablets e celulares.
-
-- **Design Moderno:**  
-  Uso de cores, gradientes e ícones para uma experiência agradável.
-
-- **Integração RESTful:**  
-  Comunicação entre frontend e backend via JSON, seguindo o padrão REST.
+- **Componentização:** Todos os recursos são organizados em componentes reutilizáveis.
+- **Hooks do React:** Uso extensivo de `useState`, `useEffect` e outros hooks para gerenciamento de estado e efeitos colaterais.
+- **Responsividade:** Layout adaptável para diferentes tamanhos de tela.
+- **Feedback ao usuário:** Mensagens claras em todas as operações.
+- **Código limpo e documentado:** Facilita manutenção e evolução futura.
 
 ---
 
-## Customização e Temas
+## Expansão e Futuro
 
-- O tema principal utiliza tons de roxo e rosa, seguindo a identidade visual do Grupo WB.
-- Para alterar cores ou estilos, edite o arquivo `index.css` e os utilitários Tailwind nos componentes.
-
----
-
-## Contribuição
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nome`)
-3. Commit suas alterações (`git commit -am 'Adiciona nova feature'`)
-4. Push para o branch (`git push origin feature/nome`)
-5. Abra um Pull Request
+O sistema foi estruturado para fácil expansão, permitindo a inclusão de novos módulos (produtos, serviços, relatórios, etc.) conforme a demanda da empresa.
 
 ---
+
+## Contato
 
 **Desenvolvido para o Grupo World Beauty (WB) - 2025**  
-Documentação criada para uso interno e treinamento de colaboradores.
+Dúvidas ou sugestões? Entre em contato com a equipe de TI do Grupo
