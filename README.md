@@ -38,13 +38,13 @@ O Sistema WB foi projetado para atender as necessidades reais do Grupo World Bea
 ## Tecnologias Utilizadas
 
 - **Frontend:**  
-  - React 18+  
-  - TypeScript  
-  - Tailwind CSS  
-  - Heroicons  
+  - React 18.0.0  
+  - TypeScript 4.6.3  
+  - Tailwind CSS 3.4.17  
+  - Heroicons 2.2.0  
 - **Backend:**  
-  - Java 17+  
-  - Spring Boot (micro-serviço RESTful, fornecido pela empresa)
+  - Java 17.0.2  
+  - Spring Boot 2.7.18 (micro-serviço RESTful, fornecido pela empresa)
 
 ---
 
@@ -54,28 +54,33 @@ Para garantir a execução correta do projeto, utilize as seguintes versões de 
 
 ### Softwares necessários
 
-- **Node.js:** 16.20.2 ou superior (recomendado 16.x)
-- **npm:** 6.x ou superior (vem junto com o Node.js)
-- **Java:** 17 ou superior (para executar o backend)
-- **Spring Boot:** 2.7.x ou superior (já incluso no backend)
+- **Node.js:** 16.20.2
+- **npm:** 9.6.7
+- **Java:** 17.0.2 (para executar o backend)
+- **Spring Boot:** 2.7.18 (já incluso no backend)
 
 ### Principais bibliotecas do frontend
 
-- **React:** ^18.0.0
-- **TypeScript:** ^4.6.3
-- **Tailwind CSS:** ^3.4.17
-- **@heroicons/react:** ^2.2.0
-- **react-scripts:** ^5.0.1
-- **autoprefixer:** ^10.4.21
-- **postcss:** ^8.5.6
+- **react:** 18.0.0
+- **react-dom:** 18.0.0
+- **typescript:** 4.6.3
+- **tailwindcss:** 3.4.17
+- **@heroicons/react:** 2.2.0
+- **react-scripts:** 5.0.1
+- **autoprefixer:** 10.4.21
+- **postcss:** 8.5.6
 
 ### Outras dependências relevantes
 
-- **@testing-library/jest-dom:** ^5.16.3
-- **@testing-library/react:** ^12.1.4
-- **@testing-library/user-event:** ^13.5.0
-- **react-icons:** ^5.5.0
-- **web-vitals:** ^2.1.4
+- **@testing-library/jest-dom:** 5.16.3
+- **@testing-library/react:** 12.1.4
+- **@testing-library/user-event:** 13.5.0
+- **@types/jest:** 27.4.1
+- **@types/node:** 16.11.26
+- **@types/react:** 17.0.43
+- **@types/react-dom:** 17.0.14
+- **react-icons:** 5.5.0
+- **web-vitals:** 2.1.4
 
 > As versões completas das dependências estão no arquivo [`frontend/package.json`](frontend/package.json).
 
@@ -85,13 +90,13 @@ Para garantir a execução correta do projeto, utilize as seguintes versões de 
 
 ### 1. Pré-requisitos
 
-- Node.js 16+ (recomendado 16.x)
-- npm
-- Java 17+ (para o backend)
+- Node.js 16.20.2
+- npm 9.6.7
+- Java 17.0.2
 
 ### 2. Instalação e Execução do Frontend
 
-No terminal, execute os comandos abaixo:
+No terminal, execute os comandos abaixo na ordem:
 
 ```bash
 cd frontend
@@ -102,7 +107,7 @@ Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
 ### 3. Execução do Backend
 
-O backend está disponível como um executável Java (`wbbackend.jar`). Para rodar abra um novo terminal e execute simultaneamente com o Frontend:
+O backend está disponível como um executável Java (`wbbackend.jar`). Para rodar, abra um novo terminal e execute simultaneamente com o frontend:
 
 ```bash
 cd backend/executavel
@@ -188,4 +193,4 @@ O sistema foi estruturado para fácil expansão, permitindo a inclusão de novos
 ## Contato
 
 **Desenvolvido para o Grupo World Beauty (WB) - 2025**  
-Dúvidas ou sugestões? Entre em contato com a equipe de TI do Grupo
+Dúvidas ou sugestões? Entre em contato com a equipe de TI
